@@ -9,7 +9,7 @@ Acest program în limbaj C este destinat parcurgerii unui director și generări
 
 ## Cerințe
 
-- Programul necesită exact un argument pentru a rula. Dacă acesta nu este furnizat, se afișează un mesaj de eroare: "Utilizare: ./program <director_intrare>".
+- Programul necesită exact un argument pentru a rula. Dacă acesta nu este furnizat, se afișează un mesaj de eroare: ```Usage: %s <input_directory>\n```.
 - Argumentul trebuie să fie calea către un director existent pe sistemul de fișiere.
 
 ## Funcționalități
