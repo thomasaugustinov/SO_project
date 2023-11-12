@@ -18,8 +18,8 @@ Acest program în limbaj C este destinat parcurgerii unui director și generări
 - Generează un fișier `statistica.txt` în directorul curent, care include detalii despre fiecare element din directorul de intrare:
   - Pentru fișierele BMP: nume, înălțime, lățime, dimensiune, ID-ul utilizatorului, timpul ultimei modificări, numărul de legături, drepturi de acces pentru utilizator, grup și alții.
   - Pentru fișierele obișnuite non-BMP: aceleași informații, excluzând înălțimea și lățimea.
-  - Pentru legăturile simbolice: nume legătură, dimensiune legătură, dimensiune fișier target, drepturi de acces.
-  - Pentru directoare: nume director, identificatorul utilizatorului, drepturi de acces.
+  - Pentru legăturile simbolice: nume legătură, dimensiune legătură, dimensiune fișier target, drepturi de acces pentru utilizator, grup și alții.
+  - Pentru directoare: nume director, identificatorul utilizatorului, drepturi de acces pentru utilizator, grup și alții.
   - Pentru alte tipuri de fișiere, nu se scrie nimic în fișierul `statistica.txt`.
 
 ## Detalii Implementare
