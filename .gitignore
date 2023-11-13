@@ -1,0 +1,8 @@
+# Ignore directories
+Directory/
+
+# Ignore executable
+projectComp
+
+# Ignore statistica.txt
+statistica.txt
