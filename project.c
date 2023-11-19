@@ -184,17 +184,23 @@ int main(int argc, char **argv) {
 		long int pixelCount = width * height;
 		
 		for (long int i = 0; i < pixelCount; i++) {
-		  if (read(bmpFd, pixel, 3) != 3) {
-		    perror("Failed to read pixel data!");
+		  ssize_t result = read(bmpFd, pixel, 3);
+		  if (result != 3) {
+		    if (result == -1) {
+		      perror("Failed to read pixel data");
+		    } else if (result == 0) {
+		      fprintf(stderr, "End of file reached unexpectedly when reading pixel data!\n");
+		    } else {
+		      fprintf(stderr, "Partial pixel data read. Expected 3 bytes, got %zd\n", result);
+		    }
 		    if (close(bmpFd) == -1) {
-		      perror("Error closing the bmp file!");
-		      exit(EXIT_FAILURE);
+		      perror("Error closing the bmp file");
 		    }
 		    exit(EXIT_FAILURE);
 		  }
-
+		  
 		  unsigned char grey = (unsigned char)(0.299 * pixel[2] + 0.587 * pixel[1] + 0.114 * pixel[0]);
-
+		  
 		  memset(pixel, grey, sizeof(pixel));
 
 		  if (lseek(bmpFd, -3, SEEK_CUR) == (off_t)-1) {
