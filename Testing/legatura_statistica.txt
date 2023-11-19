@@ -1,6 +1,0 @@
-nume legatura: legatura
-dimensiune legatura: 63
-dimensiune fisier: 13
-drepturi de acces user legatura: RW-
-drepturi de acces grup legatura: RW-
-drepturi de acces altii legatura: R--

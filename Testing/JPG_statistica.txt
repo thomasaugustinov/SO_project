@@ -1,5 +1,0 @@
-nume director: JPG
-identificatorul utilizatorului: 1000
-drepturi de acces user director: RWX
-drepturi de acces grup director: RWX
-drepturi de acces altii director: R-X
