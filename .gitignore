@@ -2,7 +2,7 @@
 Directory/
 
 # Ignore executable
-projectComp
+/projectComp
 
 # Ignore statistica.txt
-statistica.txt
+/statistica.txt
